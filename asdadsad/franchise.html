@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: center;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+.btn {
+  background-color: Red;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.btn:hover {
+  background-color: REd;
+}
+</style>
+		<!-- NAVIGATION BAR CSS -->
+    <style type="text/css">
+	.menu-bar{
+			    background-color:#c00a27;
+		margin-bottom: 20px;
+		-webkit-box-shadow: 0 1px 2px #d0cfcf;
+		box-shadow: 0 1px 2px #d0cfcf;
+		}
+	.menu-contents{
+			position: relative;
+			left: 60px;
+			font-family: 'Libre Franklin', sans-serif;
+            font-size: 150%;
+		}
+	ul{
+			list-style-type: none;
+			padding: 4;
+			overflow-x: hidden;
+			overflow: hidden;
+			background-color:#c00a27;
+			
+		}
+	li{
+			float: left;
+		}
+	li a{
+			font-family: 'Libre Franklin', sans-serif;
+			font-weight: bold;
+	    	display: flex;
+			color:white;
+			text-align: center;
+			padding: 1px 14px;
+			text-decoration: none;
+			flex-basis: 400px;
+			border:1px solid;
+			margin:10px;
+			
+		}
+		
+	li a:hover{
+			background-color: black;
+			webkit-transition: 1000ms ease;
+			transition: 1000ms ease;
+		}
+	</style>
+	<!-----FOOOTERCSSS-->
+
+<style type="text/css">
+		.low-masthead{
+			background-image: url(black.jpg);
+			border-radius: 0px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: relative;
+			top: 400px;
+			padding: 90px;			
+		}
+		.logolow{
+			position: absolute;
+			top: 35px;
+			left:350px;
+			
+		}
+		.footertxt{
+		font-family: 'Libre Franklin', sans-serif;
+		color: #fff;
+		position: absolute;
+			top: 30px;
+			left:1100px;
+		}
+		.copyright{
+		font-family: 'Libre Franklin', sans-serif;
+		color: #fff;
+		position: absolute;
+		top: 2450px;
+		left:500px;
+		text-align:center;
+		}
+		.social{
+			position: absolute;
+			top: 2450px;
+			left:1100px;
+
+		}
+</style>
+<!-- MASTHEAD CSS -->
+    <style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
+
+
+		@font-face{
+		font-family: 'Libre Franklin', sans-serif;
+		src url:(librefranklin/LibreFranklin-Black)
+		}
+		.masthead-bg{
+		font-family: 'Libre Franklin', sans-serif;
+		background-image: url(background.jpg);
+		border-radius: 0px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position-relative;
+		height:400px;
+		}
+		.logo-masthead{
+		position:absolute;
+		top: 150px;
+		left: 370px;
+		}
+		.div-masthead{
+			align-content: center;
+			position: relative;
+		}
+		.masthead{
+		font-weight: 700;
+		font-size: 3vw;
+		text-shadow: 2px 2px 2px #000000a3;
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+		top: 50%;
+		left: 55%;
+		position: absolute;
+		-webkit-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		}
+    </style>
+</head>
+<body>
+<!-- MASTHEAD -->
+	<div class="div-masthead masthead-bg">
+		<img src="logo.png" height="125" width="140" alt="Sbarro Logo" class="logo-masthead">
+		<header>
+			<h1 class="masthead">
+				HANDMADE 
+				FRESH 
+				ALL 
+				DAY
+			</h1>
+		</header>
+    </div>
+<!-- NAVIGATIONS -->
+	<div class="menu-bar" style="opacity: 1.0;">
+		<header>
+			<h3 class="menu-contents">
+				<ul>
+					<li><a href="" target="_self">HOME</a></li>
+					<li><a href="" target="_self">PROMOS</a></li>
+					<li><a href="" target="_self">OUR FOOD</a></li>
+					<li><a href="" target="_self">BRANCHES</a></li>
+					<li><a href="" target="_self">FRANCHISING</a></li>
+					<li><a href="" target="_self">CONTACT US</a></li>
+					<li><a href="" target="_self">ABOUT US</a></li>
+					<li><a href="" target="_self">CAREERS</a></li>
+						
+				</ul>
+			</h3>
+		</header>
+    </div>
+
+<Br>
+<br>
+<center>
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Welcome')">Welcome</button>
+  <button class="tablinks" onclick="openCity(event, 'Process')">Process</button>
+  <button class="tablinks" onclick="openCity(event, 'FAQs')">FAQs</button>
+</div>
+
+<div id="Welcome" class="tabcontent">
+  <p>Thank you for your interest in becoming a member of the SBARRO family.</p>
+  <br>
+  <br>
+  <p>At SBARRO we believe nothing but the freshest handmade pizzas and pastas must be served to our guests; a tradition we have been keeping since </p>
+  <p>Gennaro and Carmela Sbarro founded their first SBARRO in 1956. We believe that all food should start with passion, pride and authenticity and that it’s</p>
+  <p>made even better with all that’s fresh and flavorful today.</p>
+  <br>
+  <br>
+  <p>It is precisely this passion which has allowed SBARRO to become on of the largest pizza companies in the world, with over 800 branches across 33 </p>
+  <p>countries. SBARRO continues to serve traditional New York Pizzas and more with a bold New York spirit that has made the brand name famous for over </p>
+  <p>50 years.</p>
+  <br>
+  <br>
+  <p>This year marks the 25th year SBARRO has been doing business in the Philippines. We have accomplished this by being committed to the timeless </p>
+  <p>tradition of hands-on pizza making, as well as a fearless pursuit of fresh flavor bringing the best of SBARRO’s roots to the Filipino Customer.</p>
+  <br>
+  <br>
+  <p>We pledge our full support, as well as the resources that come from being part of the SBARRO Philippines Team to create opportunities for the brand’s</p>
+  <p>growth and for existing and potential new Franchisees.</p>
+  <br>
+  <br>
+  <p>Again, we thank you for your interest and look forward to hearing from you!</p>
+  <br>
+  <br>
+  
+  <h2 style= "color: red;">MARCELINO M. FLORETE JR.</h2>
+  <p>President</p>
+  <p>Supersalute Foods Corporation</p>
+  <p>Sbarro Philippines</p>
+  <img src="learn.jpeg" alt="learn">
+  <img src="footer-divider.jpeg" alt="footer-divider">
+</div>
+</center>
+<center>
+<div id="Process" class="tabcontent">
+  <a href="https://www.sbarro.ph/frontend/franchise-form/franchise_application.pdf" download>
+  <button class="btn" ><i class="fa fa-download"></i> Download</button>
+  </a>
+  <img src="process.jpeg" alt="process">
+    <img src="learn.jpeg" alt="learn">
+  <img src="footer-divider.jpeg" alt="footer-divider">
+</div>
+
+<div id="FAQs" class="tabcontent">
+  <h3>DOES SBARRO REALLY MAKE THEIR PIZZA AND PASTA FRESH EVERYDAY?</h3>
+  <p>Yes! Everything sold in SBARRO stores are handmade fresh all day, everyday. Pizzas and pastas are cooked and prepared in front of our customers. </p>
+  <p>SBARRO was founded on the belief that nothing but the freshest food must be served to guests. This is part of the DNA of every SBARRO store.</p>
+  <br>
+  <br>
+  <h3>HOW LONG HAS SBARRO BEEN AROUND?</h3>
+  <p>SBARRO was founded in 1956 by Gennaro and Carmela Sbarro. Since then, its grown to be one of the biggest pizza chains in the world! SBARRO has  </p>
+  <p>been operating in the Philippines for the past 25 years and boasts a growing network of stores year on year.</p>
+  <br>
+  <br>
+  <h3>HOW LONG WOULD IT TAKE BEFORE I SEE A RETURN ON MY INVESTMENT?</h3>
+  <p>ROI usually takes around 2 to 2 and a half years. Our team of experts will do their nest to train, support, and prepare franchisees to shorten this time as well.</p>
+  <br>
+  <br>
+  <h3>WHAT SORT OF SUPPORT DO YOU GIVE NEW FRANCHISEES?</h3>
+  <p>We have assembled a team of experts to help prepare our franchisees to maximize their store’s potential. We provide site evaluation, training, operations and marketing support to our franchisees.</p>
+  <br>
+  <br>
+  <img src="learn.jpeg" alt="learn">
+  <img src="footer-divider.jpeg" alt="footer-divider">
+</div>
+
+</center>
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   <!-- FOOTER AND LOWMASTHEAD -->
+<footer>
+	<div class=" low-masthead">
+		<header >
+			<img src="logo.png" height="120" width="140" alt="Sbarro Logo" class="logolow">
+			<h4 class="footertxt">
+				<b>Follow Us</b>
+			</h4>
+		</header>
+	</div>
+	<header>
+	<h4 class="copyright">
+		Made by Boquerin Michael BM/1<br/>
+	     <b>Copyright © 2020 Upper Crust Foods Pvt Ltd. All Rights Reserved.</b>
+		</h4>
+	</header>
+	<div class="social">
+	<img src="social.png" height="50" width="140" usemap="#social">
+	<map name="social">
+		
+    <area target="_blank" alt="facebook"  href="https://www.facebook.com/SbarroPhilippines/" coords="1,1,48,48" shape="rect">
+	<area target="_blank" alt="twitter" href="https://twitter.com/sbarro?lang=en" coords="56,9,90,52" shape="rect">
+	 <area target="_blank" alt="instagram"  href="https://www.instagram.com/sbarro_ph/" coords="98,11,188,53" shape="rect">
+	</map>
+	</div>
+
+</footer>
+</body>
+</html> 

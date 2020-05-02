@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+</style>
+<!-- MASTHEAD CSS -->
+    <style type="text/css">
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin&display=swap');
+
+
+		@font-face{
+		font-family: 'Libre Franklin', sans-serif;
+		src url:(librefranklin/LibreFranklin-Black)
+		}
+		.masthead-bg{
+		font-family: 'Libre Franklin', sans-serif;
+		background-image: url(background.jpg);
+		border-radius: 0px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position-relative;
+		height:400px;
+		}
+		.logo-masthead{
+		position:absolute;
+		top: 150px;
+		left: 370px;
+		}
+		.div-masthead{
+			align-content: center;
+			position: relative;
+		}
+		.masthead{
+		font-weight: 700;
+		font-size: 3vw;
+		text-shadow: 2px 2px 2px #000000a3;
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+		top: 50%;
+		left: 55%;
+		position: absolute;
+		-webkit-transform: translate(-50%,-50%);
+		transform: translate(-50%,-50%);
+		}
+    </style>
+		<!-- NAVIGATION BAR CSS -->
+    <style type="text/css">
+	.menu-bar{
+		background-color:#c00a27;
+		margin-bottom: 20px;
+		-webkit-box-shadow: 0 1px 2px #d0cfcf;
+		box-shadow: 0 1px 2px #d0cfcf;
+		}
+	.menu-contents{
+			position: relative;
+			left: 60px;
+			font-family: 'Libre Franklin', sans-serif;
+            font-size: 150%;
+		}
+	ul{
+			list-style-type: none;
+			padding: 4;
+			overflow-x: hidden;
+			overflow: hidden;
+			background-color:#c00a27;
+			
+		}
+	li{
+			float: left;
+		}
+	li a{
+			font-family: 'Libre Franklin', sans-serif;
+			font-weight: bold;
+	    	display: flex;
+			color:white;
+			text-align: center;
+			padding: 1px 14px;
+			text-decoration: none;
+			flex-basis: 400px;
+			border:1px solid;
+			margin:10px;
+			
+		}
+		
+	li a:hover{
+			background-color: black;
+			webkit-transition: 1000ms ease;
+			transition: 1000ms ease;
+		}
+	</style>
+	<!-----FOOOTERCSSS-->
+
+<style type="text/css">
+		.low-masthead{
+			background-image: url(black.jpg);
+			border-radius: 0px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			position: relative;
+			top: 0px;
+			padding: 90px;			
+		}
+		.logolow{
+			position: absolute;
+			top: 35px;
+			left:350px;
+			
+		}
+		.footertxt{
+		font-family: 'Libre Franklin', sans-serif;
+		color: #fff;
+		position: absolute;
+			top: 30px;
+			left:1100px;
+		}
+		.copyright{
+		font-family: 'Libre Franklin', sans-serif;
+		color: #fff;
+		position: absolute;
+		top: 1760px;
+		left:475px;
+		text-align:center;
+		}
+		.social{
+			position: absolute;
+			top: 1760px;
+			left:1100px;
+
+		}
+</style>
+</head>
+<body>
+<!-- MASTHEAD -->
+	<div class="div-masthead masthead-bg">
+		<img src="logo.png" height="125" width="140" alt="Sbarro Logo" class="logo-masthead">
+		<header>
+			<h1 class="masthead">
+				HANDMADE 
+				FRESH 
+				ALL 
+				DAY
+			</h1>
+		</header>
+    </div>
+<!-- NAVIGATIONS -->
+	<div class="menu-bar" style="opacity: 1.0;">
+		<header>
+			<h3 class="menu-contents">
+				<ul>
+					<li><a href="" target="_self">HOME</a></li>
+					<li><a href="" target="_self">PROMOS</a></li>
+					<li><a href="" target="_self">OUR FOOD</a></li>
+					<li><a href="" target="_self">BRANCHES</a></li>
+					<li><a href="" target="_self">FRANCHISING</a></li>
+					<li><a href="" target="_self">CONTACT US</a></li>
+					<li><a href="" target="_self">ABOUT US</a></li>
+					<li><a href="" target="_self">CAREERS</a></li>
+						
+				</ul>
+			</h3>
+		</header>
+    </div>
+
+<br>
+<br>
+<img id="myImg" src="4cheese.jpeg" alt="4cheese" style= width=500 height=500>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<img id="249" src="249.jpeg" alt="Make it a Combo" style= width=500 height=500>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<img id="stromboli" src="stromboli.jpeg" alt="Stromboli" style= width=500 height=500>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<img id="729" src="729.jpeg" alt="Stromboli" style= width=500 height=500>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+<img src="learn.jpeg" alt="learn">
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("249");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("stromboli");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+var img = document.getElementById("729");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<!-- FOOTER AND LOWMASTHEAD -->
+<footer>
+	<div class=" low-masthead">
+		<header >
+			<img src="logo.png" height="120" width="140" alt="Sbarro Logo" class="logolow">
+			<h4 class="footertxt">
+				<b>Follow Us</b>
+			</h4>
+		</header>
+	</div>
+	<header>
+	<h4 class="copyright">
+		Made by Boquerin Michael BM/1<br/>
+	     <b>Copyright © 2020 Upper Crust Foods Pvt Ltd. All Rights Reserved.</b>
+		</h4>
+	</header>
+	<div class="social">
+	<img src="social.png" height="50" width="140" usemap="#social">
+	<map name="social">
+		
+    <area target="_blank" alt="facebook"  href="https://www.facebook.com/SbarroPhilippines/" coords="1,1,48,48" shape="rect">
+	<area target="_blank" alt="twitter" href="https://twitter.com/sbarro?lang=en" coords="56,9,90,52" shape="rect">
+	 <area target="_blank" alt="instagram"  href="https://www.instagram.com/sbarro_ph/" coords="98,11,188,53" shape="rect">
+	</map>
+	</div>
+
+</footer>
+</body>
+</html>
